@@ -56,7 +56,7 @@ def graph(tickerSymbol):
         df = pd.DataFrame(datatable_json['data'][::-1], columns=[col['name'] for col in datatable_json['columns']])
         df['date'] = pd.to_datetime(df['date'])
 
-        p = figure(x_axis_type='datetime', tools='xpan,xwheel_zoom,box_zoom,reset,save', title=tickerSymbol)
+        p = figure(width=1200, sizing_mode='scale_width', x_axis_type='datetime', tools='xpan,xwheel_zoom,box_zoom,reset,save', title=tickerSymbol)
         p.xaxis.major_label_orientation = pi/6
         p.xaxis.axis_label = 'Date'
         p.yaxis.axis_label = 'Price'
