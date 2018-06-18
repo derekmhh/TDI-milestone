@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block title %}{{ tickerSymbol }} - {% endblock %}
+
+{% block style %}
+  {{ bokeh_css|safe }}
+{% endblock %}
+
+{% block content %}
+  {{ plot_div|safe }}
+{% endblock %}
+
+{% block script %}
+  {{ bokeh_js|safe }}
+  {{ plot_script|safe }}
+{% endblock %}
